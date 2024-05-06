@@ -1,41 +1,51 @@
 package main.java.proyectomejora;
 
-public class Almacen {
-    private String nombre;
-    private String descripcion;
-    private String talla;
+public class Producto {
+    private int codigo;
+    private String modelo;
+    private String color;
+    private int talla;
     private double precio;
-    private int cantidad;
+    private int stock;
 
-    public Almacen(String nombre, String descripcion, String talla, double precio, int cantidad) {
-        this.nombre = nombre.toUpperCase();
-        this.descripcion = descripcion.toUpperCase();
-        this.talla = talla.toUpperCase();
+    public Producto(int codigo, String modelo, String color, int talla, double precio, int stock) {
+        this.codigo = codigo;
+        this.modelo = modelo;
+        this.color = color;
+        this.talla = talla;
         this.precio = precio;
-        this.cantidad = cantidad;
+        this.stock = stock;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getModelo() {
+        return modelo;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    public String getTalla() {
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getTalla() {
         return talla;
     }
 
-    public void setTalla(String talla) {
+    public void setTalla(int talla) {
         this.talla = talla;
     }
 
@@ -47,10 +57,19 @@ public class Almacen {
         this.precio = precio;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getStock() {
+        return stock;
     }
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public void reducirStock(int cantidadAVender) {
+        if (this.stock >= cantidadAVender) {
+            this.stock -= cantidadAVender;
+        } else {
+            System.out.println("OPERACION INVÁLIDA, NO HAY SUFICIENTE STOCK");
+        }
     }
 }
