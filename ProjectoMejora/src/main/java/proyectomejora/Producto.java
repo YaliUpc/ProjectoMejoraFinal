@@ -8,8 +8,8 @@ public class Producto {
     private double precio;
     private int cantidad;
 
-public Producto(){
-}
+    public Producto(){
+    }
 
     public Producto(String nombre, String modelo, String talla, double precio, int cantidad) {
         this.nombre = nombre.toUpperCase();
@@ -71,6 +71,7 @@ public Producto(){
     public int getCantidad() {
         return cantidad;
     }
+
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }

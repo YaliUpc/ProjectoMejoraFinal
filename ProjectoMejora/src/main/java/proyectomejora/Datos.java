@@ -3,7 +3,7 @@ package main.java.proyectomejora;
 import java.util.ArrayList;
 
 public class Datos {
-
+// VERIFICACION
     public ArrayList<Producto> listaProductos = new ArrayList<>();
     public ArrayList<Boleta> listaBoletas = new ArrayList<>();
 
