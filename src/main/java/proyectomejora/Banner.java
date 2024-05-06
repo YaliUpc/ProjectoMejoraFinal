@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Banner {
     //SE DEFINE EL SCANNER QUE SERVIRÁ PARA TOMAR ENTRADAS DEL USUARIO
     private final Scanner sc = new Scanner(System.in);
-    // SE DEFINE UNA VARIABLE datos QUE CARGA POR COMPLETO EL CONTENIDO DE LA CLASE main.java.proyectomejora.Datos
+    // SE DEFINE UNA VARIABLE datos QUE CARGA POR COMPLETO EL CONTENIDO DE LA CLASE .Datos
     private static Datos datos = new Datos();
     static {
         datos = datos.precargarDatos();
@@ -21,14 +21,14 @@ public class Banner {
         //SE DEFINE UNA ESTRUCTURA REPETITIVA (BUCLE) PARA DIBUJAR DE FORMA REPETIDA LA CONSOLA
         do {
             System.out.println("┌───────────────────────────────────────────┐");
-            System.out.println("│           "+"SISTEMA - ZAPATAH"+"               │");
+            System.out.println("│           "+"SISTEMA - ZAPATAH"+"         │");
             System.out.println("│            MENÚ PRINCIPAL                 │");
             System.out.println("├───────────────────────────────────────────┤");
             System.out.println("│ 1. Ingreso de Nuevo Stock                 │");
-            System.out.println("│ 2. Eliminar  main.java.proyectomejora.Producto del Inventario      │");
+            System.out.println("│ 2. Eliminar  Producto del Inventario      │");
             System.out.println("│ 3. Consultar Por Código de producto       │");
             System.out.println("│ 4. Actualizar Stock                       │");
-            System.out.println("│ 5. Consultar main.java.proyectomejora.Boleta emitida, Por DNI      │");
+            System.out.println("│ 5. Consultar Boleta emitida, Por DNI      │");
             System.out.println("│ 6. Mostrar Todo el Inventario             │");
             System.out.println("│ 7. Salir                                  │");
             System.out.println("└───────────────────────────────────────────┘");
