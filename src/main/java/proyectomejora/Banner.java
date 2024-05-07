@@ -9,8 +9,9 @@ import java.util.Scanner;
 public class Banner {
     //SE DEFINE EL SCANNER QUE SERVIRÁ PARA TOMAR ENTRADAS DEL USUARIO
     private final Scanner sc = new Scanner(System.in);
-    // SE DEFINE UNA VARIABLE datos QUE CARGA POR COMPLETO EL CONTENIDO DE LA CLASE .Datos
+    // SE DEFINE UNA VARIABLE datos QUE CARGA POR COMPLETO EL CONTENIDO DE LA CLASE Datos
     private static Datos datos = new Datos();
+
     static {
         datos = datos.precargarDatos();
     }
@@ -21,7 +22,7 @@ public class Banner {
         //SE DEFINE UNA ESTRUCTURA REPETITIVA (BUCLE) PARA DIBUJAR DE FORMA REPETIDA LA CONSOLA
         do {
             System.out.println("┌───────────────────────────────────────────┐");
-            System.out.println("│           "+"SISTEMA - ZAPATAH"+"         │");
+            System.out.println("│           "+"SISTEMA - ZAPATAH"+"               │");
             System.out.println("│            MENÚ PRINCIPAL                 │");
             System.out.println("├───────────────────────────────────────────┤");
             System.out.println("│ 1. Ingreso de Nuevo Stock                 │");
@@ -159,7 +160,7 @@ public class Banner {
 
     private void consultarProducto() {
         List<DetalleBoleta> listaDetalleBoleta = new ArrayList<>();
-        System.out.print("Ingresa codigo del main.java.proyectomejora.Producto: ");
+        System.out.print("Ingresa codigo del Producto: ");
         int codigo = sc.nextInt();
         int cantidadAVender;
         Producto zapato = datos.consultarProducto(codigo);
@@ -186,11 +187,11 @@ public class Banner {
                             zapato.reducirStock(cantidadAVender);
                         }
 
-                        System.out.print("Desea continuar Comprando\n1.SI\n2.NO\n");
+                        System.out.print("Desea continuar Vendiendo?\n1.SI\n2.NO\n");
                         int opcion = sc.nextInt();
                         sc.nextLine();
                         if (opcion == 1) {
-                            System.out.print("Ingresa codigo del main.java.proyectomejora.Producto: ");
+                            System.out.print("Ingresa codigo del Producto: ");
                             codigo = sc.nextInt();
                             sc.nextLine();
                             zapato = datos.consultarProducto(codigo);
@@ -218,7 +219,7 @@ public class Banner {
                     System.out.println("OPCIÓN INVÁLIDA: SALIENDO DEL PROGRAMA");
             }
         } else  {
-            System.out.println("main.java.proyectomejora.Producto no encontrado, elija una opción:\n1.Volver a intentarlo\n2.Salir del programa");
+            System.out.println("Producto no encontrado, elija una opción:\n1.Volver a intentarlo\n2.Salir del programa");
             int eleccion = sc.nextInt();
             switch (eleccion) {
                 case 1:
@@ -294,7 +295,7 @@ public class Banner {
             eleccionCerrar("PRODUCTO ACTUALIZADO CON ÉXITO\nElija una opción: \n1.VOLVER AL MENÚ PRINCIPAL\n2.SALIR DEL PROGRAMA");
 
         } else {
-            System.out.println("main.java.proyectomejora.Producto no encontrado.");
+            System.out.println("Producto no encontrado.");
         }
     }
 
